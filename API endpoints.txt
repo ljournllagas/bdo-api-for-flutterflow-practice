@@ -1,0 +1,25 @@
+Auth controller
+----------------
+
+[HTTP Post] Register
+
+> email address
+> password
+
+[HTTP Post] Login
+
+> email address
+> password
+
+
+User Controller
+-----------------
+
+[HTTP Post] User
+
+> first name
+> middle name
+> last name
+> date of birth
+> isFilipino
+
