@@ -3,8 +3,6 @@ using Application.DTOs.Authentication.Request;
 using Application.DTOs.Authentication.Response;
 using Application.Interfaces.Services;
 using MediatR;
-using System.Threading;
-using System.Threading.Tasks;
 
 namespace Application.Features.Authentication
 {

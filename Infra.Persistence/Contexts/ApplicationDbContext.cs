@@ -1,4 +1,5 @@
 ﻿using Application.Interfaces;
+using Infra.Persistence.FluentEntityConfigs;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
 using Microsoft.EntityFrameworkCore.Diagnostics;
@@ -37,6 +38,7 @@ namespace Infra.Persistence.Contexts
                 property.SetColumnType("decimal(18,6)");
             }
 
+            builder.ApplyConfiguration(new AuthConfig());
         }
 
         public override async Task<int> SaveChangesAsync(CancellationToken cancellationToken = new CancellationToken())
@@ -46,8 +48,8 @@ namespace Infra.Persistence.Contexts
 
         public class ApplicationDbFactory : IDesignTimeDbContextFactory<ApplicationDbContext>
         {
-            private readonly IDateTimeService _dateTime;
-            private readonly IHttpContextAccessor _httpContextAccessor;
+            private readonly IDateTimeService? _dateTime;
+            private readonly IHttpContextAccessor? _httpContextAccessor;
 
             public ApplicationDbFactory()
             {
@@ -85,7 +87,7 @@ namespace Infra.Persistence.Contexts
                 //    , ServiceLifetime.Scoped
                 //);
 
-                return new ApplicationDbContext(optionsBuilder.Options, _dateTime, _httpContextAccessor);
+                return new ApplicationDbContext(optionsBuilder.Options, _dateTime!, _httpContextAccessor!);
             }
 
         }

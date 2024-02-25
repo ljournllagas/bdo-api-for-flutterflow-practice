@@ -15,9 +15,6 @@ namespace Infrastructure.Persistence.Repositories
 
         private readonly ApplicationDbContext _dbContext;
 
-        private ICustomerRepositoryAsync _customer;
-
-        private IAddressRepositoryAsync _address;
 
         public UnitOfWork(ApplicationDbContext dbContext, IConfiguration configuration)
         {
@@ -64,8 +61,5 @@ namespace Infrastructure.Persistence.Repositories
         #endregion
 
 
-        public ICustomerRepositoryAsync Customer => _customer ??= new CustomerRepositoryAsync(_dbContext);
-
-        public IAddressRepositoryAsync Address => _address ??= new AddressRepositoryAsync(_dbContext);
     }
 }

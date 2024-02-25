@@ -1,6 +1,5 @@
 ﻿using Newtonsoft.Json;
 using System;
-
 namespace Application.Helper
 {
     public class ForWebApiTrimmingConverter : JsonConverter

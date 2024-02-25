@@ -54,8 +54,9 @@ namespace Application.Common.Extensions
         {
             return rule.Configure(config =>
             {
-                config.ApplyCondition(ctx => predicate((T)ctx.InstanceToValidate, (TProperty)ctx.PropertyValue), applyConditionTo);
+                config.ApplyCondition(ctx => predicate(ctx.InstanceToValidate, (TProperty)config.GetPropertyValue(ctx.InstanceToValidate) ), applyConditionTo);
             });
         }
+
     }
 }
