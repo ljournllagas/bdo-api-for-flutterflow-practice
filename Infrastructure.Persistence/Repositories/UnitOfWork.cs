@@ -1,9 +1,6 @@
 ﻿using Application.Interfaces.Repositories;
-using Infra.Persistence.Contexts;
-using Infra.Persistence.Repositories;
+using Infrastructure.Persistence.Contexts;
 using Microsoft.Extensions.Configuration;
-using System;
-using System.Threading.Tasks;
 
 namespace Infrastructure.Persistence.Repositories
 {

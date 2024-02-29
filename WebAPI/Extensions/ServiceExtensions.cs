@@ -64,7 +64,7 @@ namespace WebApi.Extensions
                     },
                 });
 
-            }).AddSwaggerGenNewtonsoftSupport();
+            });
 
         }
 

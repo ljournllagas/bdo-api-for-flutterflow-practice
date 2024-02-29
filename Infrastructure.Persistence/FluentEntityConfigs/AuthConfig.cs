@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Domain.Entities;
 
-namespace Infra.Persistence.FluentEntityConfigs
+namespace Infrastructure.Persistence.FluentEntityConfigs
 {
     public class AuthConfig : IEntityTypeConfiguration<Auth>
     {

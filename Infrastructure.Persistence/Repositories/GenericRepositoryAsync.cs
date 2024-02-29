@@ -1,16 +1,12 @@
 ﻿using Application.Common.Parameters;
 using Application.Interfaces.Repositories;
-using Infra.Persistence.Contexts;
 using Infra.Persistence.Extensions;
+using Infrastructure.Persistence.Contexts;
 using Mapster;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Linq.Expressions;
-using System.Threading.Tasks;
 
-namespace Infra.Persistence.Repositories
+namespace Infrastructure.Persistence.Repositories
 {
     public class GenericRepositoryAsync<TEntity> : IGenericRepositoryAsync<TEntity> where TEntity : class
     {

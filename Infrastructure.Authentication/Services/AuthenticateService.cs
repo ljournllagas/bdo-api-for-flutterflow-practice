@@ -2,22 +2,13 @@
 using Application.Interfaces;
 using Application.Interfaces.Services;
 using Domain.Settings;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
-using System;
-using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
-using System.IO;
-using System.Net;
-using System.Net.Http;
-using System.Net.Http.Headers;
 using System.Security.Claims;
-using System.Security.Cryptography;
 using System.Text;
-using System.Threading.Tasks;
 
-namespace Infra.Authentication.Services
+namespace Infrastructure.Authentication.Services
 {
     public class AuthenticateService : IAuthenticateService
     {

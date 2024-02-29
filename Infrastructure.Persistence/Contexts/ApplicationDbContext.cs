@@ -1,10 +1,12 @@
 ﻿using Application.Interfaces;
-using Infra.Persistence.FluentEntityConfigs;
+using Infrastructure.Persistence.FluentEntityConfigs;
+using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
 using Microsoft.EntityFrameworkCore.Diagnostics;
+using Microsoft.Extensions.Configuration;
 
-namespace Infra.Persistence.Contexts
+namespace Infrastructure.Persistence.Contexts
 {
     public class ApplicationDbContext : DbContext
     {
