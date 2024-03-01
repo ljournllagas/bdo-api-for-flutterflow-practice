@@ -12,6 +12,9 @@ namespace Infrastructure.Persistence.Repositories
 
         private readonly ApplicationDbContext _dbContext;
 
+        private IAuthRepositoryAsync _auth;
+
+
 
         public UnitOfWork(ApplicationDbContext dbContext, IConfiguration configuration)
         {
@@ -58,5 +61,6 @@ namespace Infrastructure.Persistence.Repositories
         #endregion
 
 
+        public IAuthRepositoryAsync Auth => _auth ??= new AuthRepositoryAsync(_dbContext);
     }
 }

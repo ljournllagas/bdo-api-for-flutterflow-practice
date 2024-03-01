@@ -8,6 +8,7 @@ using System.Linq.Expressions;
 
 namespace Infrastructure.Persistence.Repositories
 {
+
     public class GenericRepositoryAsync<TEntity> : IGenericRepositoryAsync<TEntity> where TEntity : class
     {
         private readonly ApplicationDbContext _dbContext;

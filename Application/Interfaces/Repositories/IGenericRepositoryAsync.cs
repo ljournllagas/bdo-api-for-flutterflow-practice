@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace Application.Interfaces.Repositories
 {
+
     public interface IGenericRepositoryAsync<TEntity> where TEntity : class
     {
         Task<TEntity> GetByIdAsync(int id);
